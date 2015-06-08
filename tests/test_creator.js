@@ -64,9 +64,9 @@ vows.describe('Test suite for creator').addBatch({
 			'should get a xml string in kml format' : function(err, result) {
 				var expected = '<?xml version="1.0" encoding="utf-8"?>';
 				expected += "\n";
-				expected += '<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom"><Document><Style id="red"><LineStyle><color>C81400FF</color><width>4</width></LineStyle></Style><Folder><Placemark><styleUrl>#red</styleUrl><LineString><altitudeMode>clampToGround</altitudeMode><coordinates>17.661922238767147,59.19305333867669,69.4000015258789';
+				expected += '<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom"><Document><Style id="red"><LineStyle><color>C81400FF</color><width>4</width></LineStyle></Style><Folder><Placemark><styleUrl>#red</styleUrl><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>absolute</altitudeMode><coordinates>17.661922238767147,59.19305333867669,69.4000015258789';
 				expected += "\n";
-				expected += '17.662122901529074,59.192982176318765,69.5999984741211</coordinates></LineString></Placemark></Folder><LookAt><longitude>17.661922238767147</longitude><latitude>59.19305333867669</latitude><altitude>0</altitude><heading>0</heading></LookAt></Document></kml>';
+				expected += '17.662122901529074,59.192982176318765,69.5999984741211</coordinates></LineString></Placemark></Folder><LookAt><longitude>17.661922238767147</longitude><latitude>59.19305333867669</latitude><altitude>69.4000015258789</altitude><heading>0</heading></LookAt></Document></kml>';
 				assert.equal(result, expected);
 			}
 		}
